@@ -1,4 +1,4 @@
-from Home_Work1.src.Square import Square
+from Home_Work2.src.Square import Square
 import pytest
 
 

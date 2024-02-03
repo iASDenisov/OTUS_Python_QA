@@ -1,4 +1,4 @@
-from Home_Work1.src.Figure import Figure
+from Home_Work2.src.Figure import Figure
 import math
 
 

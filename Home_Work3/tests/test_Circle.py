@@ -1,4 +1,4 @@
-from Home_Work1.src.Circle import Circle
+from Home_Work2.src.Circle import Circle
 from math import pi
 import pytest
 

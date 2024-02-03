@@ -1,4 +1,4 @@
-from Home_Work1.src.Rectangle import Rectangle
+from Home_Work2.src.Rectangle import Rectangle
 
 
 class Square(Rectangle):

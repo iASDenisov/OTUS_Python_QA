@@ -1,5 +1,5 @@
 import pytest
-from Home_Work1.src.Triangle import Triangle
+from Home_Work2.src.Triangle import Triangle
 
 
 def test_triangle_area():
