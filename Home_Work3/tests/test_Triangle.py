@@ -20,3 +20,4 @@ def test_invalid_triangle_creation_negative_side():
 def test_invalid_triangle_creation_invalid_sides():
     with pytest.raises(ValueError):
         triangle = Triangle(1, 1, 3)
+

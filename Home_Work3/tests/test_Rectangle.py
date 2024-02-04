@@ -15,3 +15,4 @@ def test_rectangle_perimeter():
 def test_invalid_rectangle_creation():
     with pytest.raises(ValueError):
         rectangle = Rectangle(-1, 4)
+

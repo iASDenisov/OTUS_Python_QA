@@ -15,3 +15,4 @@ def test_square_perimeter():
 def test_invalid_square_creation():
     with pytest.raises(ValueError):
         square = Square(-1)
+
