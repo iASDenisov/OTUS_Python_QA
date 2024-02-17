@@ -38,4 +38,5 @@ def browser(request):
         driver = webdriver.Chrome(service=service)
 
     driver.maximize_window()
-    return driver
+    yield driver
+    driver.close()
