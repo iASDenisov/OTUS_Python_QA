@@ -1,4 +1,4 @@
-import time
+""" text """
 import pytest
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service as ChromeService
@@ -14,27 +14,28 @@ def pytest_addoption(parser):
 
 @pytest.fixture()
 def browser(request):
+    """ 1st fixture """
     browser_name = request.config.getoption('--browser')
     headless = request.config.getoption('--headless')
-    browser = None
+    driver = None
 
     if browser_name == 'chrome':
         options = ChromeOptions()
         if headless:
             options.add_argument("--headless=new")
         service = ChromeService()
-        browser = webdriver.Chrome(service=service, options=options)
+        driver = webdriver.Chrome(service=service, options=options)
     elif browser_name == 'ff':
         options = FFOptions()
         if headless:
             options.add_argument("-headless")
-        browser = webdriver.Firefox(options=options)
+        driver = webdriver.Firefox(options=options)
     elif browser_name == 'ya':
         options = ChromeOptions()
         if headless:
             options.add_argument("--headless=new")
         service = ChromeService(executable_path='C:/yandexdriver')
-        browser = webdriver.Chrome(service=service)
+        driver = webdriver.Chrome(service=service)
 
-    browser.maximize_window()
-    return browser
+    driver.maximize_window()
+    return driver
